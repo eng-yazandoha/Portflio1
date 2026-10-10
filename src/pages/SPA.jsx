@@ -1,20 +1,17 @@
-
-import Navbar from '../components/Navbar'
 import Footer from '../components/Footer';
-import Header from '../components/Header';
-import Services from '../components/Services';
-import Featured from '../components/Featured';
+import Services from './Services';
+import Featured from './Featured';
 import Testimonials from '../components/Testimonials';
-import Client from '../components/Client';
-import Bio from '../components/Bio';
+import Client from './Client';
+import Bio from './Bio';
 import MapView from '../components/MapView';
 import Contact from '../components/Contact';
-import About from '../components/About';
+import About from './About';
+import Home from './Home';
 export default function SPA() {
   return (
     <>
-      <Navbar/>
-      <Header/>
+      <Home/>
       <About/>
       <Services/>
       <Featured/>

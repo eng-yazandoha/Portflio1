@@ -1,4 +1,6 @@
-
+import FeatureDataView from "../components/FeatureDataView";
+import FeatureItem from "../components/FeatureItem";
+import {featuredName} from "../data/FeaturedData";
 
 export default function Featured() {
   return (
@@ -12,25 +14,20 @@ export default function Featured() {
     
     <div className="featured-img d-flex flex-column align-items-center  ">
       <ul className="nav nav-pills mb-3 mt-5 justify-content-center" id="pills-tab" role="tablist">
-        <li className="nav-item me-3" role="presentation">
-          <button className="nav-link active rounded-pill mb-2" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">ALL</button>
-        </li>
-        <li className="nav-item me-3" role="presentation">
-          <button className="nav-link rounded-pill mb-2" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Web Design</button>
-        </li>
-        <li className="nav-item me-3" role="presentation">
-          <button className="nav-link rounded-pill mb-2" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Motion Graphic</button>
-        </li>
-
-        <li className="nav-item me-3" role="presentation">
-          <button className="nav-link rounded-pill mb-2" id="pills-llustration-tab" data-bs-toggle="pill" data-bs-target="#pills-llustration" type="button" role="tab" aria-controls="pills-llustration" aria-selected="false">llustration</button>
-        </li>
-        <li className="nav-item me-3" role="presentation">
-          <button className="nav-link rounded-pill mb-2" id="pills-Photography-tab" data-bs-toggle="pill" data-bs-target="#pills-Photography" type="button" role="tab" aria-controls="pills-Photography" aria-selected="false">Photography</button>
-        </li>
+        {
+          featuredName.map((featur)=>(
+            <FeatureItem name={featur.viewName} id={featur.id} featurName={featur.name}/>
+          ))
+        }
       </ul>
+      
       <div className="tab-content" id="pills-tabContent">
-        <div className="tab-pane fade show active trans" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabIndex="0">
+        {
+          featuredName.map((featur)=>(
+            <FeatureDataView name={featur.viewName} id={featur.id} featurName={featur.name}/>
+          ))
+        }
+        {/* <div className="tab-pane fade show active trans" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabIndex="0">
           <div className="container">
             <div className="row ">
               <div className="col-md-4 mb-3">
@@ -137,9 +134,11 @@ export default function Featured() {
                   </div>
                 </div>
               </div>
+            
             </div>
           </div>
         </div>
+        
         <div className="tab-pane fade trans" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabIndex="0">
           <div className="container">
             <div className="row ">
@@ -233,6 +232,7 @@ export default function Featured() {
             </div>
           </div>      
         </div>
+        
         <div className="tab-pane fade trans" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabIndex="0">
           <div className="container">
             <div className="row ">
@@ -310,6 +310,7 @@ export default function Featured() {
             </div>
           </div>
         </div>
+        
         <div className="tab-pane fade trans" id="pills-llustration" role="tabpanel" aria-labelledby="pills-llustration-tab" tabIndex="0">
           <div className="container">
             <div className="row ">
@@ -370,12 +371,14 @@ export default function Featured() {
             </div>
           </div>
         </div>
+        
         <div className="tab-pane fade trans" id="pills-Photography" role="tabpanel" aria-labelledby="pills-Photography-tab" tabIndex="0">
           <div className="container">
             <div className="row ">
             </div>
           </div>
-        </div>
+        </div> */}
+      
       </div>
     </div>
   </section>
