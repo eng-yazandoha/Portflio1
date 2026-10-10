@@ -83,14 +83,6 @@ const FeatureView = [
         viewName:"llustration",
         title:"Rappox Template5",
         text:"Html template design.5"
-    },
-    {
-        id:6,
-        type:"Photography",
-        img:fe1,
-        viewName:"Photography",
-        title:"Rappox Template6",
-        text:"Html template design.6"
     }
 ]
 

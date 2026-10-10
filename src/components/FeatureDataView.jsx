@@ -10,6 +10,7 @@ export default function FeatureDataView({id,featurName,name}) {
                 {
                     id==0?
                         FeatureView.map((featur)=>(
+                            
                             <ItemBoxFeatur key={featur.title} title={featur.title} text={featur.text} img={featur.img}/>
                         ))
                     :
