@@ -854,6 +854,9 @@ body{
     font-weight: 500;
     color: #fff;
 }
+.tab-content .container .row{
+    justify-content: space-around !important;
+}
 
 /* end map */
 @media screen and (max-width: 767px) {
